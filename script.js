@@ -60,7 +60,8 @@ function main() {
     function outputResults(cost, hourly) {
         let outText = "";
         const totalHours = cost / hourly;
-        let hours = totalHours;
+        let minutes = Math.floor((totalHours * 60)) % 60;
+        let hours = Math.floor(totalHours);
         let days = 0;
         let weeks = 0;
         let months = 0;
@@ -98,7 +99,10 @@ function main() {
         if (days) {
             outText += `${days} day${days > 1 ? "s" : ""}, `;
         }
-        outText += `${hours.toFixed(2)} hour${hours == 1 ? "" : "s"}`;
+        outText += `${hours.toString()} hour${hours == 1 ? "" : "s"}`;
+        if (minutes) {
+            outText += `, ${minutes.toString()} minute${minutes == 1 ? "" : "s"}`;
+        }
         $resultOutput.innerText = outText;
         $results.classList.remove("hide");
     }
