@@ -4,8 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cost in Work Days</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    Test, hello!
+    <main>
+        <h1>Cost in Work Days</h1>
+        <div id="explanation" class="mb">
+            This calculator estimates 25% for tax withholdings and<br>assumes a 40-hour work week of 8-hour days.
+        </div>
+        <div id="select-pay-type" class="mb">
+            <div class="big-label">
+                <i>How do you get paid?</i>
+            </div>
+            <input type="radio" name="pay-type" id="type-hourly" checked />
+            <label for="type-hourly">Hourly</label>
+            <input type="radio" name="pay-type" id="type-salary" />
+            <label for="type-salary">Salary</label>
+        </div>
+        <div id="pay-inputs" class="mb">
+            <div class="big-label">
+                <i>How much do you make?</i>
+            </div>
+            <div id="input-hourly-parent">
+                <label for="input-hourly">Hourly Wage</label>
+                <input type="number" name="hourly" id="input-hourly" value="26" />
+            </div>
+            <div id="input-salary-parent" style="display: none;">
+                <label for="input-salary">Annual Salary</label>
+                <input type="number" name="salary" id="input-salary" value="52000" />
+            </div>
+        </div>
+        <div id="cost-input" class="mb">
+            <div class="big-label">
+                <i>How much does the thing cost?</i>
+            </div>
+            <div id="input-cost-parent">
+                <label for="input-cost">Cost</label>
+                <input type="number" name="cost" id="input-cost" value="100" />
+            </div>
+        </div>
+        <div class="mb">
+            <button type="button" id="calculate">Dale</button>
+        </div>
+        <div id="results" class="mb hide">
+            <div class="big-label">
+                <i>Results</i>
+            </div>
+            <div>
+                You need to work approximately:
+            </div>
+            <div id="result-output">
+                <!-- Results will be displayed here -->
+            </div>
+        </div>
+    </main>
 </body>
 </html>

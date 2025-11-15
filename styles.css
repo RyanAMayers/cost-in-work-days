@@ -1,0 +1,43 @@
+body {
+    background-color: #282a3a;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    padding: 1.25rem;
+    text-align: center;
+}
+
+#pay-inputs,
+#cost-input {
+    label, input {
+        width: 8rem;
+        display: inline-block;
+        text-align: left;
+    }
+}
+
+.mb {
+    margin-bottom: 1rem;
+}
+
+.hide {
+    display: none;
+}
+
+.big-label {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+#calculate {
+    margin: 2rem;
+}
+
+#result-output {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
